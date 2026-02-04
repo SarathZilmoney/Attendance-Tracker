@@ -32,7 +32,8 @@ export function SessionList({
   if (!sessions || sessions.length === 0) {
     return (
       <div className="session-list-empty">
-        <p>No sessions for this period.</p>
+        <div className="empty-icon">📭</div>
+        <p>No sessions for this period</p>
         <p className="empty-hint">Punch in to start tracking your time!</p>
       </div>
     );

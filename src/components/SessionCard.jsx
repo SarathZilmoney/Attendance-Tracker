@@ -23,19 +23,19 @@ export function SessionCard({ session, onEdit, onDelete, isActive }) {
     <div className={`session-card ${isActive ? 'active' : ''}`}>
       <div className="session-header">
         <span className="session-date">{formatDateIST(session.date)}</span>
-        {isActive && <span className="active-badge">Active</span>}
+        {isActive && <span className="active-badge">Live</span>}
       </div>
 
       <div className="session-times">
         <div className="time-block">
           <span className="time-label">In</span>
-          <span className="time-value">{formatTimeIST(session.punch_in)}</span>
+          <span className="time-value">{formatTimeIST(session.punch_in, 'HH:mm')}</span>
         </div>
         <div className="time-separator">→</div>
         <div className="time-block">
           <span className="time-label">Out</span>
           <span className="time-value">
-            {session.punch_out ? formatTimeIST(session.punch_out) : '-'}
+            {session.punch_out ? formatTimeIST(session.punch_out, 'HH:mm') : '--:--'}
           </span>
         </div>
       </div>
@@ -49,7 +49,7 @@ export function SessionCard({ session, onEdit, onDelete, isActive }) {
 
       <div className="session-actions">
         <button
-          className="btn-icon btn-edit"
+          className="btn-icon"
           onClick={() => onEdit(session)}
           aria-label="Edit session"
         >

@@ -25,8 +25,8 @@ export function ExportButton({ sessions, monthYear }) {
       disabled={!hasData}
       title={hasData ? `Export ${formatMonthYear(monthYear)}` : 'No data to export'}
     >
-      <span className="export-icon">📊</span>
-      <span className="export-text">Export to Excel</span>
+      <span>📊</span>
+      <span>Export to Excel</span>
     </button>
   );
 }

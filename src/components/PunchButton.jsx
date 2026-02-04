@@ -43,10 +43,10 @@ export function PunchButton({ isPunchedIn, onPunchIn, onPunchOut, disabled }) {
       disabled={disabled || isLoading}
       aria-label={isPunchedIn ? 'Punch Out' : 'Punch In'}
     >
-      <span className="punch-icon">{isPunchedIn ? '⏹' : '▶'}</span>
+      <span className="punch-icon">{isPunchedIn ? '⏹️' : '▶️'}</span>
       <span className="punch-text">
         {isLoading
-          ? 'Processing...'
+          ? '...'
           : isPunchedIn
           ? 'Punch Out'
           : 'Punch In'}
